@@ -26,9 +26,8 @@ function createTokenWithExpiry(payload, secret, exp) {
  * Documentation: https://www.npmjs.com/package/jsonwebtoken#jwtverifytoken-secretorpublickey-options-callback
  */
 function verifyToken(token, secret) {
-  let decoded
   try {
-    decoded = jwt.verify(token, secret)
+    const decoded = jwt.verify(token, secret)
     return decoded
   } catch (error) {
     return false
